@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ListManager {
+    main()
+    start()
+}
+
+class ListManagerController {
+
+}
+
+javafx.Application <|-- ListManager
+
+ListManager - ListManagerController
+
+@enduml
