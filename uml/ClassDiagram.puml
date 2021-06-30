@@ -7,11 +7,63 @@ class ListManager {
 }
 
 class ListManagerController {
+    model: ListsModel
 
+    addListClicked()
+    removeListClicked()
+    editListTitleClicked()
+    addItemClicked()
+    removeItemClickedPane()
+    editDescClicked()
+    editDueDateClicked()
+    markAsCompleteClicked()
+    displayIncompleteClicked()
+    displayCompletedClicked()
+    exportListClicked()
+    exportAllListsClicked()
+    importListClicked()
+    importListsClicked()
+}
+
+class ListsModel {
+    ListsItems: ArrayList
+
+    addList()
+    removeList()
+    editTitle()
+    addItem()
+    removeItem()
+    editDesc()
+    editDueDate()
+    markComplete()
+    displayIncomplete()
+    displayComplete()
+    exportList()
+    exportAllLists()
+    importList()
+    importAllLists()
+}
+
+class Item {
+    task: String
+    dueDate: String
+    desc: String
+
+    updateTask(String)
+    updateDueDate(String)
+    updateDesc(String)
+}
+
+class List {
+    title: String
+    list: List<Item>
 }
 
 javafx.Application <|-- ListManager
 
 ListManager - ListManagerController
+ListManagerController *--> ListsModel
+ListsModel *-> List
+List *-> Item
 
 @enduml
