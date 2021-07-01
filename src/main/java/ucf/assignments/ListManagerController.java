@@ -1,78 +1,114 @@
 package ucf.assignments;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 
-public class ListManagerController {
-    //  create object of class ListsModel
+import java.awt.*;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
+
+public class ListManagerController implements Initializable {
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+    }
+
+    //  make @FXML variables
+
+    //  make observable list
 
     @FXML
-    public void addListClicked(ActionEvent actionEvent) {
-        //  call addList() from ListsModel
+    private void addList(ActionEvent actionEvent) {
+        //  get the title from titleTextField and a new eventList to the list with that title
     }
 
     @FXML
-    public void removeListClicked(ActionEvent actionEvent) {
-        //  call removeList() from ListsModel
+    private void removeList(ActionEvent actionEvent) {
+        //  find the index of the selected item
+        //  remove the index of the list
     }
 
     @FXML
-    public void editListTitleClicked(ActionEvent actionEvent) {
-        //  call editTitle() from ListsModel
+    private void handleRightClick(ActionEvent actionEvent) {
+        //  open a context menu when right clicking an element on the listview
     }
 
     @FXML
-    public void addItemClicked(ActionEvent actionEvent) {
-        //  call addItem() from ListsModel
+    private void exportList(ActionEvent actionEvent) {
+        //  this can be used from the menu bar
+        //  open up a save as window and can save the file
     }
 
     @FXML
-    public void removeItemClicked(ActionEvent actionEvent) {
-        //  call removeItem() from ListsModel
+    private void exportAllLists(ActionEvent actionEvent) {
+        //  this can be used from the menu bar
+        //  open up a save as window and can save the file
     }
 
     @FXML
-    public void editDescClicked(ActionEvent actionEvent) {
-        //  call editDesc() from ListsModel
+    private void importList(ActionEvent actionEvent) {
+        //  this can be used from the menu bar
+        //  open up an open window and can select the file
     }
 
     @FXML
-    public void editDueDateClicked(ActionEvent actionEvent) {
-        //  call editDueDate() from ListsModel
+    private void importAllList(ActionEvent actionEvent) {
+        //  this can be used from the menu bar
+        //  open up an open window and can select the file
     }
 
     @FXML
-    public void markAsCompleteClicked(ActionEvent actionEvent) {
-        //  call markComplete() from ListsModel
+    private void renameList(ActionEvent actionEvent) {
+        //  this can be used from a right click
+        //  open up another window where user can input a new title
     }
 
     @FXML
-    public void displayIncompleteClicked(ActionEvent actionEvent) {
-        //  call displayIncomplete() from ListsModel
+    private void addItem(ActionEvent actionEvent) {
+        //  this can be used from a right click to open a new window
+        //  open up another listview window where it will show all the items
     }
 
     @FXML
-    public void displayCompletedClicked(ActionEvent actionEvent) {
-        //  call displayCompleted() from ListsModel
+    private void removeItem(ActionEvent actionEvent) {
+        //  find the index of the selected item
+        //  remove the index of the list
     }
 
     @FXML
-    public void exportListClicked(ActionEvent actionEvent) {
-        //  call exportList() from ListsModel
+    private void editDueDate(ActionEvent actionEvent) {
+        //  this can be used from a right click
+        //  open up another window where user can input a new due date
     }
 
     @FXML
-    public void exportAllListsClicked(ActionEvent actionEvent) {
-        //  call exportAllLists() from ListsModel
+    private void editDesc(ActionEvent actionEvent) {
+        //  this can be used from a right click
+        //  open up another window where user can input a new due description
     }
 
     @FXML
-    public void importListClicked(ActionEvent actionEvent) {
-        //  call importList() from ListsModel
+    private void markComplete(ActionEvent actionEvent) {
+        //  this can be used from a right click
+        //  mark the complete boolean to true for this item
     }
 
     @FXML
-    public void importListsClicked(ActionEvent actionEvent) {
-        //  call importAllLists() from ListsModel
+    private void displayIncomplete(ActionEvent actionEvent) {
+        //  find all items that have the complete boolean to false
+        //  display those items
+    }
+
+    @FXML
+    private void displayComplete(ActionEvent actionEvent) {
+        //  find all items that have the complete boolean to true
+        //  display those items
     }
 }

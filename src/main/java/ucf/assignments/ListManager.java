@@ -19,7 +19,7 @@ public class ListManager extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("ListManager.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("NewListManager.fxml"));
 
             Scene scene = new Scene(root);
 
